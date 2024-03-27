@@ -19,5 +19,9 @@ RUN curl -sSL https://s3.amazonaws.com/downloads.cloud66.com/cx_installation/cx_
 # Set unprivileged user as default user
 USER $USERNAME
 
+RUN mkdir -m 0744 /home/$USERNAME/.cloud66
+
 # Set `DEVCONTAINER` environment variable to help with orientation
 ENV DEVCONTAINER=true
+
+VOLUME /home/$USERNAME/.cloud66

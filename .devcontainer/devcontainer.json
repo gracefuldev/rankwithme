@@ -4,5 +4,12 @@
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
-"remoteUser": "developer"
+	"remoteUser": "developer",
+	"mounts": [
+		{
+			"type": "volume",
+			"source": "cloud66-data",
+			"target": "/home/developer/.cloud66"
+		}
+	]
 }
